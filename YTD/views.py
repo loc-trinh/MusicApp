@@ -10,9 +10,13 @@ def youtube(request):
     if request.method == "POST":
         query = request.POST['query'].strip()
         videos = Video.remote.search(query)
-        context["videos"] = videos[:10]
+        context["videos"] = videos[:50]
         context["playlists"] = Playlist.objects.all()
     return render(request, "YTD/youtube.html", context)
+
+
+def about(request):
+    return render(request, "YTD/about.html", {})
 
 
 def frame(request):

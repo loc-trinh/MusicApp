@@ -5,6 +5,7 @@ from YTD import views
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', views.youtube, name="youtube"),
+    url(r'^about/$', views.about, name="about"),
     url(r'^frame/$', views.frame, name="frame"),
     url(r'^add_to_download/$', views.add_to_download_queue, name="add_to_download"),
     url(r'^downloads/$', views.downloads, name="downloads"),
