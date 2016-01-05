@@ -6,8 +6,20 @@
         <input class="form-control" type="text" size="88" value="" id="query" name="query" placeholder="Search YouTube">
         <input class="btn btn-primary" type="submit" name="submit" value="Search">
     </form>
+
     <br>
     <div id="player"></div>
+    <form class="form-inline" id="download" data-url="" style="display: none">
+        <div class="form-group">
+        <label for="playlist_select">Playlist: </label>
+        <select class="form-control" id="playlist_select">
+            {% for playlist in playlists %}
+                <option>{{ playlist.name }}</option>
+            {% endfor %}
+        </select>
+        </div>
+        <input class="btn btn-default" type="submit" value="Download">
+    </form>
     <br>
 
     <div class="list-group">

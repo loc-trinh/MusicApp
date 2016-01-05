@@ -17,7 +17,7 @@ class Playlist(models.Model):
 class Song(models.Model):
     playlist = models.ForeignKey(Playlist)
 
-    name = models.CharField(max_length=128)
+    name = models.CharField(max_length=256)
     url = models.CharField(max_length=128)
 
     def __unicode__(self):
