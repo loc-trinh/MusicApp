@@ -8,7 +8,7 @@
 <div class="list-group">
     {% if songs %}
         {% for song in songs %}
-        <button type="button" class="list-group-item download_link btn btn-default" data-url="{{ song.url }}" data-playlist="{{ song.playlist.slug }}" data-name="{{ song.name }}">
+        <button type="button" class="list-group-item download_link btn btn-default" data-url="{{ song.url }}" data-playlist="{{ song.playlist.slug }}"">
             <div class="row">
                 <div class="col-md-12">
                     <h5 class="list-group-item-heading">{{ song.name}}</h5>

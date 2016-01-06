@@ -22,11 +22,10 @@ $(document).ready(function(){
     $(".download_link").click(function(){
         var url = $(this).attr("data-url");
         var playlist = $(this).attr("data-playlist");
-        var song_name = $(this).attr("data-name");
         $(this).hide();
         $("#loading").slideToggle()
         $('button').prop('disabled', true);
-        $.get("/download_video/", {"url": url, "playlist": playlist, "song_name": song_name}, function(){
+        $.get("/download_video/", {"url": url, "playlist": playlist}, function(){
             $('button').prop('disabled', false);
              $("#loading").slideToggle()
         });

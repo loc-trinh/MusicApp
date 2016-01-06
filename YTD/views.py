@@ -51,7 +51,6 @@ def download_video(request):
     if request.method == "GET":
         url = request.GET["url"]
         playlist = request.GET["playlist"]
-        song_name = request.GET["song_name"]
         download(url, song_name, playlist)
         Song.objects.filter(name=song_name).delete()
     return HttpResponse("Finished downloading")
